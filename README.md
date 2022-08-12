@@ -1,4 +1,4 @@
 # lesson
 
 - Тесты выполняются в Selenoid
-- Нужно добавить контейнер tests_open_cart в сеть selenoid
+- Перед вполнением тестов нужно поднять open-cart

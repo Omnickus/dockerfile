@@ -31,6 +31,7 @@ def browser(request):
     vnc = request.config.getoption("--vnc")
     logs = request.config.getoption("--logs")
     videos = request.config.getoption("--videos")
+    print('Start with aprams: ',browser,url,driver,executor,version,vnc,logs,videos )
 
     if executor == None:
         if browser == "chrome":

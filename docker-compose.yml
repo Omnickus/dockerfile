@@ -1,4 +1,10 @@
+
+networks:
+  selenoid:
+    external: true
+
 services:
+
 
   tests:
     container_name: tests
@@ -10,6 +16,7 @@ services:
     networks:
       - selenoid
 
+
   empty_test:
     container_name: empty_test
     build: 
@@ -19,7 +26,4 @@ services:
       - "5554:5555"
     networks:
       - selenoid
-      
-networks:
-  selenoid:
 
