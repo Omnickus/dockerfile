@@ -1,0 +1,29 @@
+
+networks:
+  selenoid:
+    external: true
+
+services:
+
+
+  tests:
+    container_name: tests
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "5555:5555"
+    networks:
+      - selenoid
+
+
+  empty_test:
+    container_name: empty_test
+    build: 
+      context: ./empty_docker
+      dockerfile: Dockerfile
+    ports:
+      - "5554:5555"
+    networks:
+      - selenoid
+
